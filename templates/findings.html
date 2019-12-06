@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>AML Project</title>
+        {% include "includes.html" %}
+        <style>
+            img.plot{
+                width:50%;
+                padding:2%
+            }
+        </style>
+    </head>
+    <body>
+        {% include "nav.html" %}
+        <br>
+        <div class="container">
+            <br>
+            <h2>Findings</h2>
+            <hr>
+            <p>
+                For implementation of CNN on CIFAR10, <strong>our findings corroborate with the results</strong> of the Adam paper. Without dropout, the Adam optimizer converges in around 20 epochs whereas Adagrad and SGD are converging at around 40 epochs.
+                And the convergence results are same for with dropout, only difference being that the loss is higher than the ones without dropout.
+            </p>
+            <img class="plot" src="/static/images/our_cnn.png" alt="Image of our plots with CNN">
+            <p>
+                Though the training loss is less with dropout, we find that the models are overfitting on the validation plot. And the models with dropout have less validation loss.
+            </p>
+            <img class="plot" src="/static/images/our_cnn_val.png" alt="Image of our plots with CNN">
+            <p>
+                For Image captioning (Show, Attend and Tell) also, <strong>our findings corroborate with the results</strong> of the Adam paper.
+            </p>
+            <img class="plot" src="/static/images/image_captioning.png" alt="Image of our plots with CNN">
+
+            <h3>Conclusion :</h3>
+            <hr>
+            <p>Our results corroborate with the results from the original paper. The findings from the models and datasets that we experiment on indicate that Adam converges faster than Adagrad and SGD.</p>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function () {
+            $(".nav li").removeClass("active");
+            $('#findings').addClass('active');
+        });
+    </script>
+      
+</html>

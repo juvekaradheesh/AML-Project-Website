@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>AML Project</title>
+        {% include "includes.html" %}
+        <style>
+            img.plot{
+                width:75%;
+                padding:2%
+            }
+        </style>
+    </head>
+    <body>
+        {% include "nav.html" %}
+        <br>
+        <div class="container">
+            <br>
+            <h2>What we are doing</h2>
+            <hr>
+            <p>
+                In this project,we attempt to reproduce the result in the Convolutional Neural Networks experiment (Section 6.3) in the paper-"Adam: A Method for Stochastic Optimization" paper.
+            </p>
+            <h4>About the paper :</h4>
+            <p>
+                Adam is a simple and computationally efficient algorithm that is basically a gradient based optimization for stochastic objective functions. The paper applies this algorithm to different Machine Learning Techniques like Logistic Regression, Multi-Layer Neural Networks, Convolutional Neural Networks etc. 
+            </p>
+            <p>
+                In section 6.3 - "Experiment:Convolutional Neural Networks", they have used the architecture c64-c64-c128-1000 and the training loss is plotted against the number of epochs using different optimizers namely: 
+            </p>
+            <ol>
+                <li>Adam</li>
+                <li>AdaGrad</li>
+                <li>SGDNesterov</li>
+            </ol>
+            <p>
+                The losses are plotted using two cases: 
+            </p>
+            <ol>
+                <li>With Dropout</li>
+                <li>Without Dropout</li>
+            </ol>
+            <img class="plot" src="/static/images/adam_cnn.png" alt="Image of plots in adam paper's CNN experiment">
+            <br>
+            <p>
+                <strong>The paper demonstrates that Adam converges faster than the other two optimizers.</strong> The paper also mentions that the Adam optimizer works well with large datasets and/or higher-dimensional parameters. Though the convergence rate is verified for convex problems, the paper also shows that the optimizer can be effectively applied to non-convex machine learning problems.
+            </p>
+
+        </div>
+    </body>
+    <script>
+        $(document).ready(function () {
+            $(".nav li").removeClass("active");
+            $('#what').addClass('active');
+        });
+    </script>
+      
+</html>

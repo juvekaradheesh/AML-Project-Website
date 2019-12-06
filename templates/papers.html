@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>AML Project</title>
+        {% include "includes.html" %}
+    </head>
+    <body>
+        {% include "nav.html" %}
+        <br>
+        <div class="container">
+            <br>
+            <h2>Reference papers</h2>
+            <hr>
+            <ol>
+                <li>
+                    <p><strong> Duchi, J., Hazan, E. and Singer, Y. (2011) ‘Adaptive Subgradient Methods for Online Learning and Stochastic Optimization’, Journal of Machine Learning Research, 12(7), pp. 2121–2159. <a href="http://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=67272863&site=eds-live&scope=site">Available here.</a></strong></p>
+                    <p>This paper describes the Adagrad optimization algorithm which we have used for comparison with the Adam optimizer.Adagrad has the benefit that we don’t need to manually tune the learning rate.Adagrad sets a low learning rate for parameters that occur frequently and a higher learning rate for infrequent parameters.</p>
+                </li>
+                <li>
+                    <p><strong>Ruder, S. (2016) ‘An overview of gradient descent optimization algorithms’. <a href="http://search.ebscohost.com/login.aspx?direct=true&db=edsarx&AN=edsarx.1609.04747&site=eds-live&scope=site">Available here.</a></strong></p>                            
+                    <p>This paper provides a brief overview of the Stochastic Gradient Descent (SGD) optimization method. SGD randomly picks one data point from the whole data set at each iteration to reduce the computations enormously.</p>
+                </li>
+                <li>
+                    <p><strong>Xu, K. et al. (2015) ‘Show, Attend and Tell: Neural Image Caption Generation with Visual Attention’. <a href="http://search.ebscohost.com/login.aspx?direct=true&db=edsarx&AN=edsarx.1502.03044&site=eds-live&scope=site">Available here.</a></strong></p>                            
+                    <p>This paper provides a brief overview of the Stochastic Gradient Descent (SGD) optimization method. SGD randomly picks one data point from the whole data set at each iteration to reduce the computations enormously.</p>
+                </li>
+                <li>
+                    <p><strong>Krizhevsky, A., Sutskever, I. and Hinton, G. E. (2017) ‘ImageNet classification with deep convolutional neural networks’, Communications of the ACM. <a href="http://search.ebscohost.com.ezproxy.lib.vt.edu/login.aspx?direct=true&db=edsbig&AN=edsbig.A497774956&site=eds-live&scope=site">Available here.</a></strong></p>                            
+                    <p>This paper provides a brief overview of the Stochastic Gradient Descent (SGD) optimization method. SGD randomly picks one data point from the whole data set at each iteration to reduce the computations enormously.</p>
+                </li>
+
+            </ol>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function () {
+            $(".nav li").removeClass("active");
+            $('#papers').addClass('active');
+        });
+    </script>
+      
+</html>

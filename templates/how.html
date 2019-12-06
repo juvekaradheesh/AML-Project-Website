@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>AML Project</title>
+        {% include "includes.html" %}
+    </head>
+    <body>
+        {% include "nav.html" %}
+        <br>
+        <div class="container">
+            <br>
+            <h2>How are we doing it</h2>
+            <hr>
+            <p>
+                We are using tensorflow keras library to create Convolutional Neural Network and are running it with different optimizers in an attempt to reproduce the results.
+            </p>
+            <p>
+                We are trying the different optimizers for the Image Captioning Problem with the model used in paper "Show, Attend and Tell: Neural Image Caption Generation with Visual Attention"
+            </p>
+            <h4>
+                For the first test : 
+            </h4>
+            <p>
+                We are using tensorflow & keras Python libraries to create a different Convolutional Neural Network architecture [c32-c32-c64-c64-512]. On this network architecture we are using the following optimizers to see if we can reproduce the results :
+            </p>
+            <ol>
+                <li>Adam</li>
+                <li>Adagrad</li>
+                <li>SGD</li>
+            </ol>
+            <p>
+                We are also plotting the different optimizers on the two cases as implemented in the paper:
+            </p>
+            <ol>
+                <li>With dropout</li>
+                <li>Without dropout</li>
+            </ol>
+            <p>
+                Code for this is available in our github repository <a href="https://github.com/juvekaradheesh/AML-Project">here</a>. (Implementation Instructions given in readme of the repository.)
+            </p>
+            <h4>
+                For the second test : 
+            </h4>
+            <p>
+                We are using the <a href="https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/text/image_captioning.ipynb">this</a> notebook for the second part. The notebook implements the model similar to the one implemented in the paper “Show, Attend and Tell” with Adam optimizer. We are implementing it on the two more optimizers - Adagrad and SGD. After training with the above three optimizers we are plotting the training loss against 20 epochs.
+            </p>
+            <p>
+                For the plots we are using the matplotlib library of Python.
+            </p>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function () {
+            $(".nav li").removeClass("active");
+            $('#how').addClass('active');
+        });
+    </script>
+      
+</html>
